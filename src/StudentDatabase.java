@@ -9,12 +9,18 @@ public class StudentDatabase {
 		String[] food = {"Pizza", "Hamburgers", "Spaghetti", "Brownies", "Popcorn", "Hot dogs", "Cookies", "Pizza", "Macaroni and cheese", "Burgers"};
 
 		System.out.print("Welcome to our Java class. Which student would you like to learn more about? (enter a number 1-10): ");
+		
+		boolean flag = false;
+		
+		do
+		{
+		
 		int student = scnr.nextInt();
 		System.out.println();
 
 		try
 		{
-			System.out.println("Student " + 11 + " is " + name[11] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
+			System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
 //			if (name[11].equals("Robert Brown"))
 //			{
 ////				System.out.println();
@@ -22,11 +28,13 @@ public class StudentDatabase {
 ////				String info = scnr.next();
 ////				System.out.println();
 //			}
+			flag = false;
 		}
 		catch (IndexOutOfBoundsException e)
 		{
 			System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
-//			main(null);
+			
+			flag = true;
 		}
 		
 //		System.out.println();
@@ -48,6 +56,7 @@ public class StudentDatabase {
 		}
 		
 		
+	}while (flag == true);
+	
 	}
-
 }
