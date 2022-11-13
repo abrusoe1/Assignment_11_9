@@ -10,10 +10,10 @@ public class StudentDatabase {
 
 		System.out.print("Welcome to our Java class. Which student would you like to learn more about? (enter a number 1-10): ");
 		
-		boolean flag = false;
-		
-		do
-		{
+//		boolean flag = false;
+//		
+//		do
+//		{
 			//put all code under this do inside these brackets
 
 			int student = scnr.nextInt();
@@ -29,13 +29,13 @@ public class StudentDatabase {
 ////					String info = scnr.next();
 ////					System.out.println();
 //				}
-				flag = false;
+//				flag = false;
 			}
 			catch (IndexOutOfBoundsException e)
 			{
 				System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
 				
-				flag = true;
+//				flag = true;
 //				main(null);
 			}
 			
@@ -57,7 +57,7 @@ public class StudentDatabase {
 				System.out.println("That data does not exist. Please try again. (enter \"hometown\" or \"favorite food\"): ");
 			}
 			
-		}while(flag == true);
+//		}while(flag == true);
 		
 		
 	}
