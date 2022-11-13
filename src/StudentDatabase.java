@@ -14,17 +14,19 @@ public class StudentDatabase {
 
 		try
 		{
-			if (name[11].equals("Robert Brown"))
-			{
-				for (int i = 0; i < name.length; i++)
-				{
-					
-				}
-			}
+			System.out.println("Student " + 11 + " is " + name[11] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
+//			if (name[11].equals("Robert Brown"))
+//			{
+////				System.out.println();
+//				System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
+////				String info = scnr.next();
+////				System.out.println();
+//			}
 		}
 		catch (IndexOutOfBoundsException e)
 		{
 			System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
+//			main(null);
 		}
 		
 //		System.out.println();
