@@ -14,49 +14,52 @@ public class StudentDatabase {
 		
 		do
 		{
-		
-		int student = scnr.nextInt();
-		System.out.println();
+			//put all code under this do inside these brackets
 
-		try
-		{
-			System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
-//			if (name[11].equals("Robert Brown"))
-//			{
-////				System.out.println();
-//				System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
-////				String info = scnr.next();
-////				System.out.println();
-//			}
-			flag = false;
-		}
-		catch (IndexOutOfBoundsException e)
-		{
-			System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
+			int student = scnr.nextInt();
+			System.out.println();
+
+			try
+			{
+				System.out.println("Student is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
+//				if (name[11].equals("Robert Brown"))
+//				{
+////					System.out.println();
+//					System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
+////					String info = scnr.next();
+////					System.out.println();
+//				}
+				flag = false;
+			}
+			catch (IndexOutOfBoundsException e)
+			{
+				System.out.print("That student does not exist. Please try again. (enter a number 1-10): ");
+				
+				flag = true;
+//				main(null);
+			}
 			
-			flag = true;
-		}
+//			System.out.println();
+			//System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
+			String info = scnr.next();
+			System.out.println();
+			
+			if (info.equalsIgnoreCase("hometown"))
+			{
+				System.out.println(name[student] + " is from " + hometown[student]);
+			}
+			else if (info.equalsIgnoreCase("favorite food"))
+			{
+				System.out.println(name[student] + "'s favorite food is " + food[student]);
+			}
+			else
+			{
+				System.out.println("That data does not exist. Please try again. (enter \"hometown\" or \"favorite food\"): ");
+			}
+			
+		}while(flag == true);
 		
-//		System.out.println();
-		System.out.print("Student " + student + " is " + name[student] + ". What would you like to know about them? (enter \"hometown\" or \"favorite food\"): ");
-		String info = scnr.next();
-		System.out.println();
 		
-		if (info.equalsIgnoreCase("hometown"))
-		{
-			System.out.println(name[student] + " is from " + hometown[student]);
-		}
-		else if (info.equalsIgnoreCase("favorite food"))
-		{
-			System.out.println(name[student] + "'s favorite food is " + food[student]);
-		}
-		else
-		{
-			System.out.println("That data does not exist. Please try again. (enter \"hometown\" or \"favorite food\"): ");
-		}
-		
-		
-	}while (flag == true);
-	
 	}
+
 }
